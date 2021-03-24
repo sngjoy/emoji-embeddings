@@ -5,8 +5,8 @@ import gensim.models as gsm
 import numpy as np
 import streamlit as st
 
-SCRIPT_PATH = Path(__file__).parent.absolute()
-MODEL_FOLDER = SCRIPT_PATH / "model"
+ROOT_PATH = Path(__file__).parents[1].absolute()
+MODEL_FOLDER = ROOT_PATH / "model"
 text = [
     "🎉",
     "🎊",
@@ -77,9 +77,7 @@ if __name__ == "__main__":
 
     # Streamlit UI starts here
     st.sidebar.header("Select options:")
-    method = st.sidebar.radio(
-        "Select similarity method", ["positive", "negative"], 0
-    )
+    method = st.sidebar.radio("Select similarity method", ["positive", "negative"], 0)
 
     st.sidebar.subheader("Click Me!")
     random = st.sidebar.button("Randomize emoji")
