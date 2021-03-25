@@ -43,3 +43,6 @@ pip install -r requirements.txt
 Run the app!
 ```
 streamlit run src/emoji_streamlit.py
+
+### Screenshot
+![screenshot of app](screenshot.jpg)
