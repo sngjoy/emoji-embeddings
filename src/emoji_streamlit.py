@@ -93,7 +93,7 @@ if __name__ == "__main__":
     st.subheader("Most similar emojis")
 
     if random:
-        emojis = np.random.choice(text)
+        emojis = np.random.choice(list(jodel.vocab))
         random_header.subheader("Random emoji:")
         random_placeholder.write(emojis)
 
