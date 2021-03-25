@@ -79,8 +79,12 @@ if __name__ == "__main__":
     st.sidebar.header("Select options:")
     method = st.sidebar.radio("Select similarity method", ["positive", "negative"], 0)
 
-    st.sidebar.subheader("Click Me!")
+    st.sidebar.subheader("Click Me! 👆")
     random = st.sidebar.button("Randomize emoji")
+
+    st.sidebar.subheader("Useful shortcuts ⌨️")
+    st.sidebar.write("Mac: CTRL + CMD + Space")
+    st.sidebar.write("Win: Windows + ;")
 
     st.sidebar.subheader("Emoji Library")
     st.sidebar.write("[emojipedia](https://emojipedia.org/)")
