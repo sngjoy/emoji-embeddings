@@ -1,7 +1,7 @@
 # emoji_embeddings
 
 ### Introduction
-This web app is created to compare between two emoji embeddings models [Emoji2Vec](https://arxiv.org/pdf/1609.08359.pdf) and [Jodel](https://arxiv.org/pdf/2006.01207.pdf) and help with easy visualisation of their results.
+This web app is created to compare between two emoji embeddings models [Emoji2Vec](https://arxiv.org/pdf/1609.08359.pdf) and [Jodel](https://arxiv.org/pdf/2006.01207.pdf) and help with easy visualisation of their results by showing the top 10 most similar emojis to the inputted emoji.
 
 Emoji2Vec embeddings are learned from the emojis' descriptions in the Unicode emoji standard while Jodel embeddings are learned from a large scale messaging data based on their word-emoji cooccurrence. Both models map emoji to a 300-dimensional embedding vector.
 
