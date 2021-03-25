@@ -9,7 +9,7 @@ Emoji2Vec embeddings are learned from the emojis' descriptions in the Unicode em
 ### Downloading pre-trained embeddings for emoji embeddings 
 In the root of the repository run the following commands in terminal to download the pre-trained embeddings:
 ```
-mkdir model
+mkdir embeddings
 curl https://github.com/uclnlp/emoji2vec/raw/master/pre-trained/emoji2vec.bin -o embeddings/emoji2vec.bin
 curl https://github.com/tuedelue/jeed/raw/master/jeed1488.keyed_vecors.bin -o embeddings/jeed1488.keyed_vecors.bin
 ```
