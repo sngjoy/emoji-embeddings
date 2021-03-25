@@ -1,4 +1,7 @@
-# pylint: skip-file
+"""
+script for running streamlit app
+"""
+
 from pathlib import Path
 
 import gensim.models as gsm
@@ -7,35 +10,6 @@ import streamlit as st
 
 ROOT_PATH = Path(__file__).parents[1].absolute()
 MODEL_FOLDER = ROOT_PATH / "model"
-text = [
-    "🎉",
-    "🎊",
-    "📱",
-    "📧",
-    "💻",
-    "⭐",
-    "😉",
-    "😍",
-    "🎤",
-    "💋",
-    "👸",
-    "🍑",
-    "😭",
-    "💘",
-    "🍴",
-    "🍻",
-    "⛄",
-    "🌎",
-    "📍",
-    "👀",
-    "🏰",
-    "🌈",
-    "🎂",
-    "🍳",
-    "😋",
-    "🍾",
-    "🇰🇷",
-]
 
 
 @st.cache(allow_output_mutation=True)
@@ -51,7 +25,6 @@ def load_model():
 
 
 def get_similarity(emoji: str, emb_model: str, method: str) -> list:
-
     if emb_model == "e2v":
         model = e2v
     elif emb_model == "jodel":
@@ -66,7 +39,7 @@ def get_similarity(emoji: str, emb_model: str, method: str) -> list:
 
         elif method == "negative":
             result = [model.most_similar(negative=e) for e in emoji][0]
-    except:
+    except KeyError:
         result = f"{emoji} not in vocabulary"
 
     return result
